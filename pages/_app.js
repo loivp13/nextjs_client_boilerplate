@@ -4,6 +4,8 @@ import { API } from "../config";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import moment from "moment";
+import "../public/static/css/main.scss";
+import "nprogress/nprogress.css";
 
 const Home = ({ categories }) => {
   const [popular, setPopular] = useState([]);

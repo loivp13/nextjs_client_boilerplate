@@ -1,5 +1,5 @@
-import getConfig from "next/config";
-const { publicRuntimeConfig } = getConfig();
+import getConfig from "./publicRuntimeConfig";
+const publicRuntimeConfig = getConfig("public");
 
 export const API = publicRuntimeConfig.API;
 export const APP_NAME = publicRuntimeConfig.APP_NAME;
