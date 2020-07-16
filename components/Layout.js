@@ -10,38 +10,32 @@ Router.onRouteChangeError = (url) => NProgress.done();
 
 const Layout = ({ children }) => {
   const nav = () => (
-    <ul className="nav nav-tabs bg-warning">
-      <li className="nav-item">
+    <ul className=" ">
+      <li className=" ">
         <Link href="/">
-          <a className="nav-link text-dark" href="">
+          <a className=" " href="">
             Home
           </a>
         </Link>
       </li>
 
-      <li className="nav-item">
+      <li className=" ">
         <Link href="/user/link/create">
-          <a
-            className="nav-link text-dark btn btn-success"
-            style={{ borderRadius: "0px" }}
-            href=""
-          >
-            Submit a Link
-          </a>
+          <a href="">Submit a Link</a>
         </Link>
       </li>
       {process.browser && !isAuth() && (
         <React.Fragment>
-          <li className="nav-item">
+          <li className="">
             <Link href="/login">
-              <a className="nav-link text-dark" href="">
+              <a className=" " href="">
                 Login
               </a>
             </Link>
           </li>
-          <li className="nav-item">
+          <li className=" ">
             <Link href="/register">
-              <a className="nav-link text-dark" href="">
+              <a className=" " href="">
                 Register
               </a>
             </Link>
@@ -51,24 +45,24 @@ const Layout = ({ children }) => {
       {process.browser && isAuth() && isAuth().role === "admin" && (
         <li className="nav-item ml-auto">
           <Link href="/admin">
-            <a href="" className="nav-link text-dark">
+            <a href="" className=" ">
               {isAuth().name}
             </a>
           </Link>
         </li>
       )}
       {isAuth() && isAuth().role === "subscriber" && (
-        <li className="nav-item ml-auto">
+        <li className="">
           <Link href="/user">
-            <a href="" className="nav-link text-dark">
+            <a href="" className="">
               {isAuth().name}
             </a>
           </Link>
         </li>
       )}
       {isAuth() && (
-        <li className="nav-item">
-          <a onClick={logout} className="nav-link text-dark" href="">
+        <li className=" ">
+          <a onClick={logout} className=" " href="">
             Logout
           </a>
         </li>
@@ -79,7 +73,7 @@ const Layout = ({ children }) => {
   return (
     <React.Fragment>
       {nav()}
-      <div className="container pt-5 pb-5">{children}</div>
+      <div className=" ">{children}</div>
     </React.Fragment>
   );
 };

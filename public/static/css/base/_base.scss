@@ -10,7 +10,7 @@
 html {
   /* widely used to allow user to enlarge while still allowing dev to easily use rem */
   font-size: 62.5%;
-  color: white;
+  color: black;
 
   @include respond(tab-land) {
     font-size: 56.5%; //1 rem = 9px, 9/16 = 56.5%
@@ -25,7 +25,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: black;
+  background-color: white;
   padding: 0 5rem;
   @include respond(tab-port) {
     padding: 0;
@@ -50,6 +50,6 @@ a {
     text-decoration: underline;
   }
   &:visited {
-    color: white;
+    color: black;
   }
 }
